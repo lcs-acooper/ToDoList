@@ -26,9 +26,21 @@ struct LandingView: View {
                 
                 List {
                     
-                    Text("Study for Chemistry")
-                    Text("Finish computer science")
-                    Text("Go Run in Circles")
+                    Label(
+                        title: {
+                            Text("Study for Chemistry Quiz")
+                        }, icon: { Image(systemName: "circle") }
+                    )
+                    Label(
+                        title: {
+                            Text("Finish Computer Science")
+                        }, icon: { Image(systemName: "circle") }
+                    )
+                    Label(
+                        title: {
+                            Text("Run in circles")
+                        }, icon: { Image(systemName: "circle") }
+                    )
                 }
                 .searchable(text: $searchText)
                 
