@@ -17,6 +17,9 @@ struct LandingView: View {
     //The search text
     @State var searchText = ""
     
+    //The list of to-do items
+    @State var todos: [toDoItem] = exampleItems
+    
     //Mark: Computed properties
     var body: some View {
         
@@ -24,11 +27,10 @@ struct LandingView: View {
             
             VStack {
                 
-                List {
+                List(todos) { todo in
                     
-                    ItemView(currentItem: firstItem)
-                    ItemView(currentItem: secondItem)
-                    ItemView(currentItem: thirdItem)
+                    ItemView(currentItem: todo)
+                    
                 }
                 .searchable(text: $searchText)
                 
