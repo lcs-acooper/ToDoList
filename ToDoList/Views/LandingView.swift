@@ -20,7 +20,7 @@ struct LandingView: View {
     //The list of to-do items
     @State var todos: [toDoItem] = exampleItems
     
-    //Mark: Computed properties
+    //MARK: Computed properties
     var body: some View {
         
         NavigationView {
@@ -40,16 +40,30 @@ struct LandingView: View {
                     
                     Button("ADD") {
                         // Add the new to-do Item
+                        createToDo(withTitle: newItemDecription)
                         
                     }
                     .font(.caption)
+                    .disabled(newItemDecription.isEmpty == true)
                 }
                     .padding(20)
             }
             .navigationTitle("To Do")
         }
     }
+    
+    // MARK: Functions
+    func createToDo(withTitle title: String) {
+        
+        //Crate the new to-do item instance
+        let todo = toDoItem(title: title, done: false)
+        
+        // Append to the array
+        todos.append(todo)
+    }
 }
+
+
 #Preview {
     LandingView()
 }
