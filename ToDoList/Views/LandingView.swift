@@ -26,21 +26,9 @@ struct LandingView: View {
                 
                 List {
                     
-                    Label(
-                        title: {
-                            Text("Study for Chemistry Quiz")
-                        }, icon: { Image(systemName: "circle") }
-                    )
-                    Label(
-                        title: {
-                            Text("Finish Computer Science")
-                        }, icon: { Image(systemName: "circle") }
-                    )
-                    Label(
-                        title: {
-                            Text("Run in circles")
-                        }, icon: { Image(systemName: "circle") }
-                    )
+                    ItemView(title: "Study for Chemistry", done: false)
+                    ItemView(title: "Finish Computer Science", done: true)
+                    ItemView(title: "Go run in circles", done: false)
                 }
                 .searchable(text: $searchText)
                 
@@ -62,4 +50,24 @@ struct LandingView: View {
 }
 #Preview {
     LandingView()
+}
+
+struct ItemView: View {
+
+    let title: String
+    let done: Bool
+
+    var body: some View {
+        Label(
+            title: {
+                Text(title)
+            }, icon: {
+                if done == true {
+                    Image(systemName: "checkmark.circle")
+                } else {
+                    Image(systemName: "circle")
+                }
+            }
+        )
+    }
 }
