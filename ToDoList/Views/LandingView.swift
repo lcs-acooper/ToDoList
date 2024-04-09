@@ -32,7 +32,16 @@ struct LandingView: View {
                 }
                 .searchable(text: $searchText)
                 
-                HStack { }
+                HStack {
+                    TextField("Enter a to-do item", text:
+                        $newItemDecription)
+                    
+                    Button("ADD") {
+                        // Add the new to-do Item
+                        
+                    }
+                    .font(.caption)
+                }
                     .padding(20)
             }
             .navigationTitle("To Do")
