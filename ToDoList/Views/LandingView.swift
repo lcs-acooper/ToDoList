@@ -27,7 +27,7 @@ struct LandingView: View {
             
             VStack {
                 
-                List(todos) { todo in
+                List($todos) { $todo in
                     
                     ItemView(currentItem: todo)
                     //Delete a to=do item
@@ -39,6 +39,10 @@ struct LandingView: View {
                                     delete(todo)
                                 }
                             )
+                        }
+                    //Tap to mark as done
+                        .onTapGesture {
+                            todo.done.toggle()
                         }
                     }
                 .searchable(text: $searchText)
