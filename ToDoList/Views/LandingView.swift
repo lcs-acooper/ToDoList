@@ -30,8 +30,17 @@ struct LandingView: View {
                 List(todos) { todo in
                     
                     ItemView(currentItem: todo)
-                    
-                }
+                    //Delete a to=do item
+                        .swipeActions {
+                            Button(
+                                "Delete",
+                                role: .destructive,
+                                action: {
+                                    delete(todo)
+                                }
+                            )
+                        }
+                    }
                 .searchable(text: $searchText)
                 
                 HStack {
@@ -60,6 +69,12 @@ struct LandingView: View {
         
         // Append to the array
         todos.append(todo)
+    }
+    
+    func delete(_ todo: toDoItem) {
+        
+        //Remove the provided to-do item from arrau
+        todos.removeAll() { currentItem in currentItem.id == todo.id}
     }
 }
 
