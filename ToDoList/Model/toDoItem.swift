@@ -19,18 +19,27 @@ class toDoItem: Identifiable {
     }
 }
 
-let firstItem = toDoItem(title: "Study for chemistry", done: false)
+extension toDoItem {
+    
+    @MainActor
+    static var preview: ModelContainer {
+        
+        let container = try! ModelContainer(
+            for: toDoItem.self,
+            configurations: ModelConfiguration(isStoredInMemoryOnly: true)
+        )
+        
+        // Add mock data
+        container.mainContext.insert(
+            toDoItem(title: "Go for a walk", done: false)
+        )
+        container.mainContext.insert(
+            toDoItem(title: "Have a nap", done: true)
+        )
+        container.mainContext.insert(
+            toDoItem(title: "Call mom", done: false)
+        )
 
-let secondItem = toDoItem(title: "Do Computer Science", done: true)
-
-let thirdItem = toDoItem(title: "Run in Circles", done: false)
-
-
-
-
-let exampleItems = [
-
-    toDoItem(title: "Study for chemistry", done: false)
-
-
-]
+        return container
+    }
+}
