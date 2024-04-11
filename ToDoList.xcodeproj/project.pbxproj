@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DB0363592BC59BAC00D050EA /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0363582BC59BAC00D050EA /* ItemView.swift */; };
 		DB03635B2BC59CC500D050EA /* toDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB03635A2BC59CC500D050EA /* toDoItem.swift */; };
+		DB51B0CD2BC6E9C60061E958 /* Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51B0CC2BC6E9C60061E958 /* Foundation.swift */; };
 		DB66573B2BC5917100CBD97B /* ToDoListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB66573A2BC5917100CBD97B /* ToDoListApp.swift */; };
 		DB66573D2BC5917100CBD97B /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB66573C2BC5917100CBD97B /* LandingView.swift */; };
 		DB66573F2BC5917300CBD97B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB66573E2BC5917300CBD97B /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* Begin PBXFileReference section */
 		DB0363582BC59BAC00D050EA /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
 		DB03635A2BC59CC500D050EA /* toDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toDoItem.swift; sourceTree = "<group>"; };
+		DB51B0CC2BC6E9C60061E958 /* Foundation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foundation.swift; sourceTree = "<group>"; };
 		DB6657372BC5917100CBD97B /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB66573A2BC5917100CBD97B /* ToDoListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListApp.swift; sourceTree = "<group>"; };
 		DB66573C2BC5917100CBD97B /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 		DB66574B2BC5937B00CBD97B /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				DB51B0CC2BC6E9C60061E958 /* Foundation.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 				DB66573D2BC5917100CBD97B /* LandingView.swift in Sources */,
 				DB0363592BC59BAC00D050EA /* ItemView.swift in Sources */,
 				DB03635B2BC59CC500D050EA /* toDoItem.swift in Sources */,
+				DB51B0CD2BC6E9C60061E958 /* Foundation.swift in Sources */,
 				DB66573B2BC5917100CBD97B /* ToDoListApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
